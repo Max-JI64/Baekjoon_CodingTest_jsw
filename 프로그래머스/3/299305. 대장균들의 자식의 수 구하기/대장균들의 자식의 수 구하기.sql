@@ -1,5 +1,5 @@
-select parent.id, count(child.id) as child_count
-from ecoli_data parent
-left join ecoli_data child on parent.id=child.parent_id
-group by parent.id
-order by parent.id;
+SELECT PARENT.ID, COUNT(CHILD.ID) AS CHILD_COUNT -- CHILD의 개수를 새는 것이므로 
+FROM ECOLI_DATA PARENT
+LEFT JOIN ECOLI_DATA CHILD ON PARENT.ID = CHILD.PARENT_ID
+GROUP BY PARENT.ID
+ORDER BY PARENT.ID;
